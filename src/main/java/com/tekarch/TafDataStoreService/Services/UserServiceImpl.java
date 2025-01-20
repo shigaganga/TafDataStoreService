@@ -38,8 +38,6 @@ public class UserServiceImpl implements UserService {
             User actualUser=existinguser.get();//if the user present retrives the actual user object
             //from the optional using get() method
             actualUser.setUsername(user.getUsername());
-            System.out.println("Email"+user.getEmail());
-            System.out.println("user"+user);
            // updates the username of actualuser with the new value passed in the user parameter
             actualUser.setEmail(user.getEmail());
             actualUser.setPhone(user.getPhone());

@@ -39,8 +39,8 @@ public class UserController {
 
     }*/
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteAccount(@PathVariable Long id) {
-        if(!userServiceImpl.getUserById(id).getUserId().equals(0L)) {
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        if(!userServiceImpl.getUserById(id).getUser_id().equals(0L)) {
             //0L might be used as a default value to represent a non-existent or invalid AccountId.
             userServiceImpl.deleteUserById(id);
             return ResponseEntity.ok("User deleted successfully.");
