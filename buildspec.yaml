@@ -28,7 +28,7 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - DOCKER_CONTAINER_NAME=datastoreservice-repo
+      - DOCKER_CONTAINER_NAME=dataservicerepo
       - printf '[{"name":"%s","imageUri":"%s"}]' "$DOCKER_CONTAINER_NAME" "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
       - echo Printing imagedefinitions.json
       - cat imagedefinitions.json
